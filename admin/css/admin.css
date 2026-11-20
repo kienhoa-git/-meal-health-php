@@ -1,4 +1,4 @@
-@import url('../css/style.css');
+@import url('../../css/style.css');
 
 body { background: #f3f6f4; }
 .admin-layout { display: flex; min-height: 100vh; }
