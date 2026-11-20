@@ -87,7 +87,7 @@ include __DIR__ . '/includes/header.php';
             <?php foreach ($top_foods as $i => $f): ?>
                 <tr>
                     <td><?= $i + 1 ?></td>
-                    <td><div style="display:flex;align-items:center;gap:10px"><img class="thumb" src="<?= e($f['hinh_anh']) ?>" alt=""><strong><?= e($f['ten']) ?></strong></div></td>
+                    <td><div style="display:flex;align-items:center;gap:10px"><img class="thumb" src="<?= e(asset_url($f['hinh_anh'])) ?>" alt=""><strong><?= e($f['ten']) ?></strong></div></td>
                     <td><?= (int)$f['da_ban'] ?></td>
                     <td><?= money($f['doanh_thu']) ?></td>
                 </tr>

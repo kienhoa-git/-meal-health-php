@@ -72,7 +72,7 @@ include __DIR__ . '/includes/header.php';
                     <tr>
                         <td>
                             <div style="display:flex;align-items:center;gap:10px">
-                                <img class="thumb" src="<?= e($f['hinh_anh']) ?>" alt="">
+                                <img class="thumb" src="<?= e(asset_url($f['hinh_anh'])) ?>" alt="">
                                 <a href="monan.php?edit=<?= (int)$f['id'] ?>"><?= e($f['ten']) ?></a>
                             </div>
                         </td>

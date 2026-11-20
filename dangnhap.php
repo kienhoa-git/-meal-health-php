@@ -43,7 +43,7 @@ include __DIR__ . '/includes/header.php';
             <?= csrf_field() ?>
             <div class="form-group">
                 <label for="email">Email hoặc tên đăng nhập</label>
-                <input type="text" id="email" name="email" required value="<?= e($_POST['email'] ?? '') ?>" placeholder="amin hoặc user1@example.com">
+                <input type="text" id="email" name="email" required value="<?= e($_POST['email'] ?? '') ?>" placeholder="admin hoặc user1@example.com">
             </div>
             <div class="form-group">
                 <label for="mat_khau">Mật khẩu</label>
@@ -56,7 +56,7 @@ include __DIR__ . '/includes/header.php';
 
         <div style="margin-top:20px;padding:14px;background:var(--green-light);border-radius:10px;font-size:.9rem">
             <strong>Tài khoản demo (dùng chung 1 form):</strong><br>
-            Admin: <code>amin</code> / <code>123</code><br>
+            Admin: <code>admin</code> / <code>123</code><br>
             Khách: <code>user1@example.com</code> / <code>123456</code>
         </div>
         <p style="text-align:center;margin-bottom:0;margin-top:16px">Chưa có tài khoản? <a href="dangky.php">Đăng ký ngay</a></p>

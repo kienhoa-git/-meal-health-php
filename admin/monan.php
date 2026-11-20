@@ -156,7 +156,7 @@ include __DIR__ . '/includes/header.php';
                 <label for="hinh_anh">Ảnh món ăn (tối đa 2 MB)</label>
                 <input type="file" id="hinh_anh" name="hinh_anh" accept="image/*">
                 <?php if ($edit): ?>
-                    <img class="preview-img" src="<?= e($edit['hinh_anh']) ?>" alt="" style="margin-top:8px">
+                    <img class="preview-img" src="<?= e(asset_url($edit['hinh_anh'])) ?>" alt="" style="margin-top:8px">
                 <?php endif; ?>
             </div>
         </div>
@@ -179,7 +179,7 @@ include __DIR__ . '/includes/header.php';
         <tbody>
         <?php foreach ($rows as $r): ?>
             <tr>
-                <td><img class="thumb" src="<?= e($r['hinh_anh']) ?>" alt=""></td>
+                <td><img class="thumb" src="<?= e(asset_url($r['hinh_anh'])) ?>" alt=""></td>
                 <td><strong><?= e($r['ten']) ?></strong><br><small style="color:var(--muted)">Nguồn: <?= e($r['nguon']) ?></small></td>
                 <td><?= e($r['danh_muc']) ?></td>
                 <td><?= (int)$r['calo'] ?></td>

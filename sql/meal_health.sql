@@ -171,9 +171,9 @@ INSERT INTO mon_an (id, ten, slug, id_danh_muc, id_nguon, mo_ta, nguyen_lieu, ca
 (11, 'Táo nghiền bơ hạt', 'tao-nghien-bo-hat', 4, 1, 'Snack tự nhiên, không đường tinh luyện.', 'Táo, bơ hạt, quế, nước chanh.', 210, 5.0, 30.0, 9.0, 35000, 'images/product/pro11.svg', 1, 67),
 (12, 'Nước xanh rau bina & chanh', 'nuoc-xanh-rau-bina-chanh', 5, 2, 'Đồ uống giải khát, giàu vitamin và khoáng chất.', 'Rau bina, chanh, dưa leo, gừng, nước lọc.', 90, 3.0, 18.0, 1.0, 29000, 'images/product/pro12.svg', 1, 94);
 
--- Mật khẩu mẫu: 123 (admin "amin"), 123456 (các user)
+-- Mật khẩu mẫu: 123 (admin "admin"), 123456 (các user)
 INSERT INTO nguoi_dung (id, ho_ten, email, mat_khau, gioi_tinh, tuoi, chieu_cao, can_nang, muc_do_hoat_dong, muc_tieu, dien_thoai, dia_chi, vai_tro, trang_thai) VALUES
-(1, 'amin', 'admin@mealhealth.local', '$2y$12$7HVldA9Lm2MGkRTSezrTQOhh1QVzuLVpgs7sxxfdQeXzYQjMffGKa', 'khac', 30, 170.00, 65.00, 'trung_binh', 'duy_tri', '19001234', 'Hà Nội', 'admin', 1),
+(1, 'admin', 'admin@mealhealth.local', '$2y$12$7HVldA9Lm2MGkRTSezrTQOhh1QVzuLVpgs7sxxfdQeXzYQjMffGKa', 'khac', 30, 170.00, 65.00, 'trung_binh', 'duy_tri', '19001234', 'Hà Nội', 'admin', 1),
 (2, 'Nguyễn Văn A', 'user1@example.com', '$2y$12$YfzAOC3SPFkz45B8k.bMuuqtUQJxEWLwPQz0K.kUnuJhsGkcZg0eK', 'nam', 28, 172.00, 78.00, 'trung_binh', 'giam_can', '0911111111', 'Hà Nội', 'user', 1),
 (3, 'Trần Thị B', 'user2@example.com', '$2y$12$YfzAOC3SPFkz45B8k.bMuuqtUQJxEWLwPQz0K.kUnuJhsGkcZg0eK', 'nu', 26, 160.00, 50.00, 'cao', 'tang_can', '0922222222', 'TP. Hồ Chí Minh', 'user', 1),
 (4, 'Lê Văn C', 'user3@example.com', '$2y$12$YfzAOC3SPFkz45B8k.bMuuqtUQJxEWLwPQz0K.kUnuJhsGkcZg0eK', 'nam', 35, 168.00, 66.00, 'thap', 'duy_tri', '0933333333', 'Đà Nẵng', 'user', 1);

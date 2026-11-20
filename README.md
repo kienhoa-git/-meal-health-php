@@ -94,7 +94,7 @@ Mở <http://localhost:8000>. Form đăng nhập duy nhất là <http://localhos
 
 | Vai trò | Email | Mật khẩu |
 |---|---|---|
-| Admin | `amin` (hoặc `admin@mealhealth.local`) | `123` |
+| Admin | `admin` (hoặc `admin@mealhealth.local`) | `123` |
 | Khách | `user1@example.com` | `123456` |
 | Khách | `user2@example.com` | `123456` |
 

@@ -6,6 +6,23 @@ function e($value): string
     return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
 }
 
+/**
+ * Chuyển đường dẫn ảnh tương đối cho đúng thư mục hiện tại.
+ * Ảnh trong DB lưu dạng "images/product/xxx.svg" (tính từ web root),
+ * nên khi render từ /admin/ cần thêm "../".
+ */
+function asset_url(string $path): string
+{
+    if ($path === '') {
+        return $path;
+    }
+    if (preg_match('#^(https?:)?//#i', $path) || $path[0] === '/') {
+        return $path;
+    }
+    $script = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
+    return str_contains($script, '/admin/') ? '../' . $path : $path;
+}
+
 function redirect(string $path): void
 {
     header('Location: ' . $path);
