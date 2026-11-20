@@ -1,4 +1,4 @@
-# Ăn Lành Mạnh - Web hỗ trợ sức khỏe bữa ăn
+# Ăn Lành Mạnh - Web bán bữa ăn
 
 Website PHP thuần + MySQL với đầy đủ chức năng khách hàng và quản trị, lấy cảm hứng từ cấu trúc mẫu OpenCart/bookstore nhưng chuyển sang chủ đề **bữa ăn lành mạnh**.
 
