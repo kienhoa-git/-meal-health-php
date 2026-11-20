@@ -2,6 +2,14 @@
 
 Website PHP thuần + MySQL với đầy đủ chức năng khách hàng và quản trị, lấy cảm hứng từ cấu trúc mẫu OpenCart/bookstore nhưng chuyển sang chủ đề **bữa ăn lành mạnh**.
 
+## 🌐 Website chính thức
+
+[**https://kienhoa.infinityfree.io**](https://kienhoa.infinityfree.io)
+
+Đăng nhập tại [**/dangnhap.php**](https://kienhoa.infinityfree.io/dangnhap.php):
+- Admin: `admin` / `123` → trang quản trị
+- Khách: `user1@example.com` / `123456` → trang khách hàng
+
 > 🔒 **Toàn bộ website bị khóa cho đến khi đăng nhập.** Truy cập bất kỳ URL nào cũng tự động chuyển về `dangnhap.php`; chỉ trang đăng nhập và đăng ký là mở. Sau khi đăng nhập, hệ thống tự điều hướng theo vai trò: `admin` → `admin/index.php`, `user` → `index.php`.
 
 ## 1. Chức năng chính
