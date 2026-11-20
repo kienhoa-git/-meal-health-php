@@ -6,7 +6,6 @@ Website PHP thuần + MySQL với đầy đủ chức năng khách hàng và qu�
 
 [**https://kienhoa.infinityfree.io**](https://kienhoa.infinityfree.io)
 
-Đăng nhập tại [**/dangnhap.php**](https://kienhoa.infinityfree.io/dangnhap.php):
 - Admin: `admin` / `123` → trang quản trị
 - Khách: `user1@example.com` / `123456` → trang khách hàng
 
