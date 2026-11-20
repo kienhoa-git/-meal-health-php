@@ -45,3 +45,27 @@ function current_user(): ?array
     }
     return $cached;
 }
+
+/**
+ * Chặn toàn bộ site: chỉ cho phép trang đăng nhập / đăng ký hoạt động
+ * khi chưa có session. Được gọi từ includes/db.php.
+ */
+function enforce_login_gate(): void
+{
+    if (is_logged_in()) {
+        return;
+    }
+
+    $script = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
+    $public = ['dangnhap.php', 'dangky.php'];
+
+    if (in_array(basename($script), $public, true)) {
+        return;
+    }
+
+    // Trang trong thư mục admin cần đường dẫn tương đối khác.
+    $prefix = str_contains($script, '/admin/') ? '../' : '';
+
+    flash('Vui lòng đăng nhập để truy cập website.', 'warning');
+    redirect($prefix . 'dangnhap.php');
+}

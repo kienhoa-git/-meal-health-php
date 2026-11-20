@@ -21,3 +21,6 @@ try {
 // Helper và session luôn sẵn sàng cho mọi trang (kể cả trước khi include header).
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/auth.php';
+
+// Toàn bộ website bị khóa cho đến khi đăng nhập (trừ đăng nhập / đăng ký).
+enforce_login_gate();
