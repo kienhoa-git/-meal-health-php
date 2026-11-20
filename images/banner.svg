@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9f0e2"/>
+      <stop offset="1" stop-color="#a8d8bc"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="380" rx="20" fill="url(#g)"/>
+  <circle cx="280" cy="190" r="120" fill="#fff" opacity=".55"/>
+  <circle cx="280" cy="190" r="88" fill="#f4b183" opacity=".85"/>
+  <circle cx="280" cy="190" r="60" fill="#fff3df"/>
+  <path d="M232 190c18-28 40-42 66-44-6 30-24 50-52 58 20-4 36-12 48-26-4 34-28 56-62 60 14-12 22-28 24-48z" fill="#4caf72"/>
+  <text x="280" y="345" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#1f6b41">Bữa ăn sạch · Sống khỏe mỗi ngày</text>
+</svg>

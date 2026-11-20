@@ -1,0 +1,50 @@
+name: Deploy to InfinityFree
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # Tạo config.php từ Secrets (file này không có trong Git)
+      - name: Create config.php
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASS: ${{ secrets.DB_PASS }}
+        run: |
+          python3 - <<'PY'
+          import os, json
+          keys = ['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASS']
+          with open('config.php', 'w', encoding='utf-8') as f:
+              f.write("<?php\n")
+              f.write("// File được GitHub Actions tạo tự động từ Secrets.\n")
+              f.write("return [\n")
+              for k in keys:
+                  f.write("    '%s' => %s,\n" % (k.lower(), json.dumps(os.environ[k])))
+              f.write("];\n")
+          PY
+
+      - name: FTP Deploy to InfinityFree
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          protocol: ftp
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            sql/**
+            README.md
+            .gitignore
+            php.dev.ini
